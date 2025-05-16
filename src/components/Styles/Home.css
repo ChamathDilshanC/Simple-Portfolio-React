@@ -1,0 +1,254 @@
+.home-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #0f172a;
+  padding: 100px 0 50px;
+}
+
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.home-content {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 50px;
+  align-items: center;
+  width: 100%;
+}
+
+.home-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.home-text h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  color: #e2e8f0;
+  line-height: 1.2;
+}
+
+.home-text p {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+  color: #94a3b8;
+}
+
+.home-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.cta-button {
+  padding: 14px 32px;
+  font-size: 1rem;
+  border-radius: 5px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.cta-button.primary {
+  background-color: #00b4d8;
+  color: #fff;
+}
+
+.cta-button.primary:hover {
+  background-color: #0096c7;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 180, 216, 0.3);
+}
+
+.cta-button.secondary {
+  background-color: transparent;
+  color: #e2e8f0;
+  border: 1px solid #00b4d8;
+}
+
+.cta-button.secondary:hover {
+  background-color: rgba(0, 180, 216, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 180, 216, 0.1);
+}
+
+.home-images {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  gap: 20px;
+  height: 500px;
+  position: relative;
+}
+
+.image-container {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.container-1 {
+  grid-column: 1 / 7;
+  grid-row: 1 / 6;
+}
+
+.container-2 {
+  grid-column: 7 / 11;
+  grid-row: 2 / 9;
+  z-index: 1;
+}
+
+.container-3 {
+  grid-column: 2 / 7;
+  grid-row: 6 / 9;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-container:hover .image-overlay {
+  opacity: 1;
+}
+
+.image-container:hover img {
+  transform: scale(1.05);
+}
+
+.overlay-content h3 {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.overlay-content p {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scroll-indicator a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #00b4d8;
+  font-size: 0.9rem;
+  animation: bounce 2s infinite;
+}
+
+.scroll-indicator span {
+  margin-bottom: 8px;
+}
+
+@keyframes bounce {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-10px);
+  }
+
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Responsive styles */
+@media screen and (max-width: 968px) {
+  .home-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .home-text {
+    text-align: center;
+    align-items: center;
+    order: 1;
+  }
+
+  .home-images {
+    order: 2;
+    height: 400px;
+  }
+
+  .home-text h1 {
+    font-size: 2.8rem;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .home-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .cta-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .home-images {
+    height: 350px;
+  }
+
+  .container-1 {
+    grid-column: 1 / 7;
+    grid-row: 1 / 5;
+  }
+
+  .container-2 {
+    grid-column: 7 / 11;
+    grid-row: 2 / 8;
+  }
+
+  .container-3 {
+    grid-column: 2 / 7;
+    grid-row: 5 / 9;
+  }
+}
