@@ -11,7 +11,6 @@ const About = () => {
           <div className="about-grid">
             <div className="about-image">
               <div className="image-container">
-                {/* Replace with your image path */}
                 <img src="src\assets\AbPhoto.png" alt="Profile" />
               </div>
             </div>

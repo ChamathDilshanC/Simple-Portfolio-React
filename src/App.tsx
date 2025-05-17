@@ -11,7 +11,6 @@ function App() {
       <Navbar />
       <Home />
       <About />
-      {/* Other sections can go here */}
       <Contact />
       <Footer />
     </div>
