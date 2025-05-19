@@ -1,4 +1,7 @@
 import './Styles/Home.css';
+import webImage from '../assets/Home/web.png';
+import uiImage from '../assets/Home/Ui.png';
+import reactImage from '../assets/Home/react.png';
 
 const Home = () => {
   return (
@@ -16,7 +19,7 @@ const Home = () => {
           
           <div className="home-images">
             <div className="image-container container-1">
-              <img src="src\assets\Home\web.png" alt="Project Preview 1" />
+              <img src={webImage} alt="Project Preview 1" />
               <div className="image-overlay">
                 <div className="overlay-content">
                   <h3>Web Design</h3>
@@ -26,7 +29,7 @@ const Home = () => {
             </div>
             
             <div className="image-container container-2">
-              <img src="src\assets\Home\Ui.png" alt="Project Preview 2" />
+              <img src={uiImage} alt="Project Preview 2" />
               <div className="image-overlay">
                 <div className="overlay-content">
                   <h3>UI/UX Design</h3>
@@ -36,7 +39,7 @@ const Home = () => {
             </div>
             
             <div className="image-container container-3">
-              <img src="src\assets\Home\react.png" alt="Project Preview 3" />
+              <img src={reactImage} alt="Project Preview 3" />
               <div className="image-overlay">
                 <div className="overlay-content">
                   <h3>React Development</h3>

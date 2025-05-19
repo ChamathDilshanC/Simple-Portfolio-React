@@ -1,4 +1,5 @@
 import './Styles/Footer.css';
+import { FcOk } from "react-icons/fc";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -70,7 +71,9 @@ const Footer = () => {
           <div className="back-to-top">
             <a href="#home" aria-label="Back to top">
               <i className="fas fa-arrow-up"></i>
+              <FcOk size={30} scale={1} className="margin"/>
             </a>
+            
           </div>
         </div>
       </div>

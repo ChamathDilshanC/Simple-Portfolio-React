@@ -1,4 +1,5 @@
 import './Styles/About.css'
+import profilePhoto from '../assets/AbPhoto.png';
 
 const About = () => {
   return (
@@ -11,7 +12,7 @@ const About = () => {
           <div className="about-grid">
             <div className="about-image">
               <div className="image-container">
-                <img src="src\assets\AbPhoto.png" alt="Profile" />
+              <img src={profilePhoto} alt="Profile" />
               </div>
             </div>
             
