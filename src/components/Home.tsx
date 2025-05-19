@@ -1,6 +1,6 @@
 import './Styles/Home.css';
 import webImage from '../assets/Home/web.png';
-import uiImage from '../assets/Home/Ui.png';
+import uiImage from '../assets/Home/ui.png';
 import reactImage from '../assets/Home/react.png';
 
 const Home = () => {
